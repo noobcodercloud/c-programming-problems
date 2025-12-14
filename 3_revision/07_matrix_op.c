@@ -13,12 +13,34 @@ int main() {
     // printf("%d\n", arr[0][1]); = 2
     // printf("%d\n", arr[0][2]); = 3
 
-    for (size_t i = 0; i < 3; i++) {
-        for (size_t j = 0; j < 3; j++) {
+    int sum = 0;
+
+    for (size_t i = 0; i < 3; i++) { // Parent
+
+        for (size_t j = 0; j < 3; j++) { // Child
+
             printf("%d ", arr[i][j]);
+
+            sum += arr[i][j];
+
+            // 0 0
+            // 0 1
+            // 0 2
+
+            // 1 0
+            // 1 1
+            // 1 2
+
+            // 2 0
+            // 2 1
+            // 2 2
+
         }
+
         printf("\n");
     }
+
+    printf("\nSum of matrix: %d\n\n", sum);
 
     return 0;
 }
